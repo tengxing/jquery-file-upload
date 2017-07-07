@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>demo</title>
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  			<legend>人员信息添加</legend>
+		</fieldset>
+		<div id="upload" class="layui-layer-content" style="height: 812px;"><div class="larry-personal-body clearfix">
+			<!-- <form id="upload" class="layui-form col-lg-5" method="post" action="form/upload" enctype="multipart/form-data"> -->
+			<form class="layui-form col-lg-5" action="" method="post">
+				<div class="layui-form-item">
+					<label class="layui-form-label">ID</label>
+					<div class="layui-input-block">  
+						<input type="text" id="id" name="id" autocomplete="off" class="layui-input layui-disabled" value="" disabled="disabled">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">姓名</label>
+					<div class="layui-input-block">
+						<input type="text" id="username" name="username" autocomplete="off" class="layui-input" value="">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">昵称</label>
+					<div class="layui-input-block">
+						<input type="text" id="nickname" name="nickname" autocomplete="off" class="layui-input" value="">
+					</div>
+				</div>
+				
+				
+
+				<div class="layui-form-item">
+					<label class="layui-form-label" style="padding-top: 44px;">上传附件</label>
+					<div class="layui-input-block">
+
+						<div id="drop">
+				文件拖到此处即可(限制200M)
+
+				<a>浏览</a>
+				<input type="file" name="upl" multiple />
+					</div>
+
+					<ul>
+					</ul>
+					</div>
+				</div>
+				
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn layui-btn-disabled layui-btn-radius" lay-submit="" lay-filter="formSave">保存</button>
+						<button type="reset" class="layui-btn layui-btn-disabled">重置</button>
+					</div>
+				</div>
+			</form>
+		</div></div>
+        
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.knob.js"></script>
+
+		<script src="assets/js/jquery.ui.widget.js"></script>
+		<script src="assets/js/jquery.iframe-transport.js"></script>
+		<script src="assets/js/jquery.fileupload.js"></script>
+		
+		<script src="assets/js/script.js"></script>
+		<script src="layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use(['layer','form'],function(){
+
+				layer = layui.layer,
+				form = layui.form();
+			});
+		</script>
+	</body>
+</html>
